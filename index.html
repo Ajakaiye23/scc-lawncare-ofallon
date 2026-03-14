@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SCC Lawn Care | O'Fallon, MO</title>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--green:#1B4D2E;--green2:#2D7A48;--lime:#5CB85C;--white:#F8FDF9;--dark:#0D2118;--gray:#4A6854;--border:rgba(27,77,46,0.15);--gold:#C8971F}
+body{cursor:none;background:var(--white);color:var(--dark);font-family:'Work Sans',sans-serif;overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:68px;padding:0 3rem;display:flex;align-items:center;justify-content:space-between;background:var(--green);border-bottom:3px solid var(--lime)}
+.logo{font-weight:900;font-size:1.3rem;color:#fff;letter-spacing:3px}
+.logo em{color:var(--lime);font-style:normal}
+.nav-links{display:flex;gap:2.5rem;list-style:none}
+.nav-links a{font-size:.75rem;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.55);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--lime)}
+.nav-cta{background:var(--lime);color:#fff;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;padding:10px 22px;border:none;cursor:pointer;font-family:'Work Sans',sans-serif;font-weight:700;transition:all .2s;text-decoration:none}
+.nav-cta:hover{background:#6ec96e}
+.hero{background:var(--dark);min-height:100vh;display:grid;grid-template-columns:1.2fr 1fr;padding-top:68px}
+.hero-left{padding:5rem 4rem;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
+.hero-left::after{content:'SCC';position:absolute;right:-2rem;bottom:-2rem;font-weight:900;font-size:14rem;color:rgba(92,184,92,0.04);pointer-events:none;line-height:1;letter-spacing:-4px}
+.vet-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(200,151,31,0.15);border:1px solid rgba(200,151,31,0.3);color:var(--gold);font-size:.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:6px 14px;margin-bottom:2rem;width:fit-content}
+h1{font-weight:900;font-size:clamp(3rem,6vw,6rem);line-height:.95;color:#fff;margin-bottom:1.5rem;letter-spacing:-1px}
+h1 span{color:var(--lime)}
+.hero-sub{font-size:.93rem;color:rgba(255,255,255,.5);line-height:1.9;font-weight:300;max-width:420px;margin-bottom:3rem}
+.btns{display:flex;gap:1rem}
+.btn-l{background:var(--lime);color:#fff;font-size:.78rem;letter-spacing:2px;text-transform:uppercase;padding:14px 30px;border:none;cursor:pointer;font-family:'Work Sans',sans-serif;font-weight:700;transition:all .2s;text-decoration:none;display:inline-block}
+.btn-l:hover{background:#6ec96e}
+.btn-ow{background:transparent;color:#fff;font-size:.78rem;letter-spacing:2px;text-transform:uppercase;padding:13px 30px;border:1px solid rgba(255,255,255,.2);cursor:pointer;font-family:'Work Sans',sans-serif;transition:all .2s;text-decoration:none;display:inline-block}
+.btn-ow:hover{border-color:var(--lime);color:var(--lime)}
+.hero-right{background:var(--green);padding:5rem 3rem;display:flex;flex-direction:column;justify-content:center;gap:1.5rem}
+.trust-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);padding:1.8rem;border-bottom:3px solid var(--lime)}
+.tc-title{font-weight:700;color:#fff;font-size:.95rem;margin-bottom:.3rem}
+.tc-desc{font-size:.82rem;color:rgba(255,255,255,.5);line-height:1.6;font-weight:300}
+.strip{background:var(--lime);padding:.7rem 0;overflow:hidden}
+.st{display:flex;animation:scroll 16s linear infinite;white-space:nowrap}
+.si{font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:#fff;padding:0 2.5rem;font-weight:700}
+@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.section{padding:6rem 3rem;max-width:1200px;margin:0 auto}
+.eyebrow{font-size:.68rem;letter-spacing:3px;text-transform:uppercase;color:var(--green2);font-weight:700;margin-bottom:.8rem}
+.title{font-weight:900;font-size:clamp(2.2rem,4.5vw,4.5rem);line-height:.95;margin-bottom:1.5rem;letter-spacing:-1px}
+.title span{color:var(--green)}
+.svcs{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);margin-top:4rem}
+.svc{background:var(--white);padding:2.5rem;transition:background .2s;position:relative}
+.svc:hover{background:#EBF5ED}
+.svc::before{content:'';position:absolute;top:0;left:0;width:100%;height:3px;background:transparent;transition:background .3s}
+.svc:hover::before{background:var(--lime)}
+.svc-icon{font-size:2rem;margin-bottom:1rem}
+.svc-name{font-weight:700;font-size:1rem;letter-spacing:.5px;margin-bottom:.5rem}
+.svc-desc{font-size:.82rem;color:var(--gray);line-height:1.7;font-weight:300}
+.discounts{background:var(--gold);padding:.5rem 3rem;text-align:center}
+.discounts p{font-size:.78rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#fff}
+.stats-section{background:var(--dark);padding:5rem 3rem;display:grid;grid-template-columns:repeat(4,1fr)}
+.stat{padding:2.5rem;border-right:1px solid rgba(255,255,255,.06);text-align:center}
+.stat:last-child{border-right:none}
+.sn{font-weight:900;font-size:3rem;color:var(--lime);line-height:1}
+.sl{font-size:.65rem;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-top:.3rem}
+.revs{background:#EBF5ED;padding:6rem 3rem}
+.ri{max-width:1200px;margin:0 auto}
+.rg{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:4rem}
+.rev{background:#fff;padding:2.5rem;border:1px solid var(--border)}
+.rev-stars{color:var(--green2);letter-spacing:2px;margin-bottom:1rem;font-size:.85rem}
+.rev-text{font-size:.86rem;color:var(--gray);line-height:1.9;font-style:italic;margin-bottom:1.5rem}
+.rev-author{font-size:.68rem;letter-spacing:2px;text-transform:uppercase;color:var(--green2);font-weight:700}
+.cta{background:var(--green);padding:7rem 3rem;text-align:center}
+.cta h2{font-weight:900;font-size:clamp(2.5rem,7vw,7rem);color:#fff;line-height:.95;letter-spacing:-2px;margin-bottom:1.5rem}
+.cta p{color:rgba(255,255,255,.55);font-size:.93rem;max-width:400px;margin:0 auto 3rem;line-height:1.9}
+.cta-ph{font-weight:900;font-size:2.5rem;color:var(--lime);display:block;margin-bottom:2rem;text-decoration:none;letter-spacing:-1px}
+.btn-w{background:#fff;color:var(--green);font-size:.8rem;letter-spacing:2px;text-transform:uppercase;padding:16px 48px;border:none;cursor:pointer;font-family:'Work Sans',sans-serif;font-weight:700;transition:all .2s;display:inline-block;text-decoration:none}
+.btn-w:hover{background:var(--lime);color:#fff}
+footer{background:var(--dark);padding:2rem 3rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.fl{font-weight:900;color:var(--lime);font-size:1rem;letter-spacing:2px}
+.fc{font-size:.68rem;letter-spacing:1px;color:rgba(255,255,255,.3)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.fi{opacity:0;animation:fadeUp .7s ease forwards}
+.d1{animation-delay:.1s}.d2{animation-delay:.25s}.d3{animation-delay:.4s}
+@media(max-width:900px){.hero{grid-template-columns:1fr;padding-top:68px}.hero-right{display:none}.nav-links{display:none}.section,.revs,.cta{padding:4rem 1.5rem}.svcs,.rg{grid-template-columns:1fr}.stats-section{grid-template-columns:1fr 1fr}}
+.cur{color:var(--lime);position:fixed;width:8px;height:8px;background:currentColor;border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:transform .1s}.cur-ring{position:fixed;width:32px;height:32px;border:1.5px solid currentColor;border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:all .15s ease;opacity:.5}
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:10000;align-items:center;justify-content:center}.modal-overlay.active{display:flex}.modal-box{background:#fff;max-width:400px;width:90%;padding:2.5rem;text-align:center;position:relative;animation:popIn .25s ease}.modal-box h3{font-size:1.2rem;color:#1a1a1a;margin-bottom:.5rem;font-weight:700}.modal-box p{font-size:.85rem;color:#666;line-height:1.6;margin-bottom:1.5rem}.modal-phone{font-size:1.8rem;font-weight:900;color:#1B4D2E;display:block;margin-bottom:1rem;text-decoration:none}.modal-addr{font-size:.82rem;color:#888;margin-bottom:1.5rem}.modal-btns{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap}.modal-btn-call{background:#1B4D2E;color:#fff;padding:12px 28px;border:none;cursor:pointer;font-weight:700;font-size:.82rem;letter-spacing:1px;text-transform:uppercase;text-decoration:none;display:inline-block}.modal-btn-map{background:transparent;color:#1B4D2E;padding:11px 28px;border:1.5px solid #1B4D2E;cursor:pointer;font-weight:700;font-size:.82rem;letter-spacing:1px;text-transform:uppercase;text-decoration:none;display:inline-block}.modal-close{position:absolute;top:1rem;right:1rem;background:none;border:none;font-size:1.5rem;cursor:pointer;color:#999;line-height:1}@keyframes popIn{from{opacity:0;transform:scale(.9)}to{opacity:1;transform:scale(1)}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo">SCC <em>LAWN</em></div>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="tel:6364856004" class="nav-cta" onclick="if(window.innerWidth>768){event.preventDefault();openBookModal()}">Free Quote</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-left">
+    <div class="vet-badge fi d1">🎖️ Veteran Owned · O'Fallon, MO</div>
+    <h1 class="fi d2">Lawn Care<br>Done <span>Right.</span></h1>
+    <p class="hero-sub fi d3">SCC Lawn Care is a veteran-owned lawn service built on military precision and customer satisfaction. Devan and his team deliver perfect results every time.</p>
+    <div class="btns fi d3">
+      <a href="tel:6364856004" class="btn-l" onclick="if(window.innerWidth>768){event.preventDefault();openBookModal()}">Get Free Quote</a>
+      <a href="#services" class="btn-ow">Our Services</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="trust-card fi d2"><div class="tc-title">⭐ 4.8 Stars · 63 Reviews</div><div class="tc-desc">Consistently top-rated by O'Fallon and St. Charles homeowners who trust Devan with their yards.</div></div>
+    <div class="trust-card fi d3"><div class="tc-title">🎖️ Veteran Owned</div><div class="tc-desc">Devan started with a push mower and a dream after leaving the Marines. Now serving his community with pride.</div></div>
+    <div class="trust-card"><div class="tc-title">💬 Responds Instantly</div><div class="tc-desc">Text Devan and he responds immediately. No voicemail black holes — real communication.</div></div>
+    <div class="trust-card"><div class="tc-title">🏡 Discounts Available</div><div class="tc-desc">Veterans, active-duty, first responders, and teachers get special pricing — always.</div></div>
+  </div>
+</div>
+
+<div class="discounts"><p>🎖️ Veterans &amp; Military · 🚒 First Responders · 📚 Teachers — All Receive Special Discounts</p></div>
+
+<div class="strip">
+  <div class="st">
+    <div class="si">Lawn Mowing ·</div><div class="si">Trimming &amp; Edging ·</div><div class="si">Aeration ·</div><div class="si">Overseeding ·</div><div class="si">Core Aeration ·</div><div class="si">Leaf Cleanup ·</div>
+    <div class="si">Lawn Mowing ·</div><div class="si">Trimming &amp; Edging ·</div><div class="si">Aeration ·</div><div class="si">Overseeding ·</div><div class="si">Core Aeration ·</div><div class="si">Leaf Cleanup ·</div>
+  </div>
+</div>
+
+<div class="section" id="services">
+  <div class="eyebrow">Services</div>
+  <h2 class="title">What We <span>Provide</span></h2>
+  <div class="svcs">
+    <div class="svc"><div class="svc-icon">🌿</div><div class="svc-name">Weekly Mowing</div><div class="svc-desc">Consistent weekly cuts with professional trimming, edging, and blowdown. Same quality every visit.</div></div>
+    <div class="svc"><div class="svc-icon">✂️</div><div class="svc-name">Trimming &amp; Edging</div><div class="svc-desc">Crisp, clean edges along beds, sidewalks, and driveways. The detail work that makes a yard look sharp.</div></div>
+    <div class="svc"><div class="svc-icon">🪱</div><div class="svc-name">Core Aeration</div><div class="svc-desc">Deep, professional aeration that actually works. Devan is an expert — customers see results all season.</div></div>
+    <div class="svc"><div class="svc-icon">🌱</div><div class="svc-name">Overseeding</div><div class="svc-desc">Thicken up thin spots and rejuvenate your lawn. Paired with aeration for maximum results.</div></div>
+    <div class="svc"><div class="svc-icon">🍂</div><div class="svc-name">Leaf Cleanup</div><div class="svc-desc">Fall leaf removal — we bag it, haul it, and leave your yard clean heading into winter.</div></div>
+    <div class="svc"><div class="svc-icon">❄️</div><div class="svc-name">Snow Removal</div><div class="svc-desc">Driveway and walkway clearing after snowfall. Same reliability and attention to detail.</div></div>
+  </div>
+</div>
+
+<div class="stats-section">
+  <div class="stat"><div class="sn">4.8★</div><div class="sl">Google Rating</div></div>
+  <div class="stat"><div class="sn">63+</div><div class="sl">Reviews</div></div>
+  <div class="stat"><div class="sn">Vet</div><div class="sl">Owned &amp; Operated</div></div>
+  <div class="stat"><div class="sn">7days</div><div class="sl">Available</div></div>
+</div>
+
+<div class="revs" id="reviews">
+  <div class="ri">
+    <div class="eyebrow">Reviews</div>
+    <h2 class="title">Trusted by <span>Neighbors</span></h2>
+    <div class="rg">
+      <div class="rev"><div class="rev-stars">★★★★★</div><p class="rev-text">"If you need a guy to take care of your yard, Devan is the guy. He does amazing work. Fantastic job — I couldn't be more pleased."</p><div class="rev-author">— Google Review</div></div>
+      <div class="rev"><div class="rev-stars">★★★★★</div><p class="rev-text">"The core aeration was done very professionally and deep. Devin worked with me when I had questions, responding to my text immediately. Thank you — highly recommend."</p><div class="rev-author">— Google Review</div></div>
+      <div class="rev"><div class="rev-stars">★★★★★</div><p class="rev-text">"Deven did a great job and was unbelievably reasonably priced. You can't go wrong trying this guy. After overseeding with him the lawn looks great."</p><div class="rev-author">— Google Review</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="cta" id="contact">
+  <h2>Your Best Lawn Starts Here.</h2>
+  <p>Call or text Devan for a free quote. Veteran-owned, reliably priced, and available 7 days a week.</p>
+  <a href="tel:6364856004" class="cta-ph">(636) 485-6004</a>
+  <a href="tel:6364856004" class="btn-w" onclick="if(window.innerWidth>768){event.preventDefault();openBookModal()}">Text or Call Now</a>
+</div>
+
+<footer>
+  <div class="fl">SCC LAWN CARE</div>
+  <div class="fc">© 2026 SCC Lawn Care · 816 Sherwood Forest Ct, O'Fallon, MO 63366</div>
+</footer>
+<script>
+const o=new IntersectionObserver(e=>{e.forEach(i=>{if(i.isIntersecting){i.target.style.opacity='1';i.target.style.transform='translateY(0)'}})},{threshold:0.1});
+document.querySelectorAll('.svc,.rev,.trust-card,.stat').forEach(el=>{el.style.opacity='0';el.style.transform='translateY(14px)';el.style.transition='opacity .5s ease,transform .5s ease';o.observe(el)});
+</script>
+<div class="cur" id="cur" style="background:#5CB85C"></div><div class="cur-ring" id="curR" style="border-color:#5CB85C"></div>
+<script>
+const C=document.getElementById("cur"),R=document.getElementById("curR");
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener("mousemove",e=>{mx=e.clientX;my=e.clientY;C.style.left=mx+"px";C.style.top=my+"px"});
+(function loop(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;R.style.left=rx+"px";R.style.top=ry+"px";requestAnimationFrame(loop)})();
+document.querySelectorAll("a,button,.svc,.svc-card,.rev,.service-card,.trust-card,.stat").forEach(el=>{el.addEventListener("mouseenter",()=>{R.style.transform="translate(-50%,-50%) scale(2.2)";R.style.opacity="0.9"});el.addEventListener("mouseleave",()=>{R.style.transform="translate(-50%,-50%) scale(1)";R.style.opacity="0.5"})});
+</script>
+<div class="modal-overlay" id="bookModal"><div class="modal-box"><button class="modal-close" onclick="closeModal()"></body>times;</button><h3>SCC Lawn Care</h3><p>Ready to book? Give us a call or find us on the map.</p><a href="tel:6364856004" class="modal-phone">(636) 485-6004</a><div class="modal-addr">816 Sherwood Forest Ct, O'Fallon, MO 63366</div><div class="modal-btns"><a href="tel:6364856004" class="modal-btn-call">Call Now</a><a href="https://maps.google.com/?q=816+Sherwood+Forest+Ct+OFallon+MO" target="_blank" class="modal-btn-map">Get Directions</a></div></div></div><script>function openBookModal(){document.getElementById('bookModal').classList.add('active')}function closeModal(){document.getElementById('bookModal').classList.remove('active')}document.getElementById('bookModal').addEventListener('click',function(e){if(e.target===this)closeModal()});</script>
+</body>
+</html>
