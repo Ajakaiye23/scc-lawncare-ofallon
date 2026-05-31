@@ -3,134 +3,392 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SCC Lawn Care | O'Fallon, MO</title>
+<title>SCC Lawn Care | Veteran-Owned · O'Fallon, MO</title>
+<!-- SEO -->
+<meta name="description" content="SCC Lawn Care is a veteran-owned lawn service in O'Fallon, MO. Mowing, fertilization, cleanups, and dependable seasonal care. Call (636) 485-6004.">
+<meta name="keywords" content="lawn care O'Fallon MO, lawn mowing, fertilization, veteran owned, yard cleanup">
+<meta name="author" content="SCC Lawn Care">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0a0a0a">
+<meta name="geo.region" content="US-MO">
+<meta name="geo.placename" content="O'Fallon, Missouri">
+<meta name="geo.position" content="38.811;-90.699">
+<meta name="ICBM" content="38.811, -90.699">
+<link rel="canonical" href="https://scclawncare-stl.netlify.app/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="business.business">
+<meta property="og:site_name" content="SCC Lawn Care">
+<meta property="og:title" content="SCC Lawn Care | O'Fallon, MO">
+<meta property="og:description" content="SCC Lawn Care is a veteran-owned lawn service in O'Fallon, MO. Mowing, fertilization, cleanups, and dependable seasonal care. Call (636) 485-6004.">
+<meta property="og:url" content="https://scclawncare-stl.netlify.app/">
+<meta property="og:image" content="https://images.unsplash.com/photo-1558904541-efa843a96f01?w=1200&h=630&q=80&auto=format&fit=crop">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SCC Lawn Care | O'Fallon, MO">
+<meta name="twitter:description" content="SCC Lawn Care is a veteran-owned lawn service in O'Fallon, MO. Mowing, fertilization, cleanups, and dependable seasonal care. Call (636) 485-6004.">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1558904541-efa843a96f01?w=1200&h=630&q=80&auto=format&fit=crop">
+
+<!-- LocalBusiness structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://scclawncare-stl.netlify.app/#business",
+  "name": "SCC Lawn Care",
+  "description": "SCC Lawn Care is a veteran-owned lawn service in O'Fallon, MO. Mowing, fertilization, cleanups, and dependable seasonal care. Call (636) 485-6004.",
+  "url": "https://scclawncare-stl.netlify.app/",
+  "telephone": "+1-636-485-6004",
+  "image": "https://images.unsplash.com/photo-1558904541-efa843a96f01?w=1200&h=630&q=80&auto=format&fit=crop",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "O'Fallon",
+    "addressRegion": "MO",
+    "postalCode": "63366",
+    "addressCountry": "US",
+    "streetAddress": "816 Sherwood Forest Ct"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 38.811,
+    "longitude": -90.699
+  },
+  "areaServed": "O'Fallon and St. Charles County, MO",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "63",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
+}
+</script>
+
 <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600;700;900&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--green:#1B4D2E;--green2:#2D7A48;--lime:#5CB85C;--white:#F8FDF9;--dark:#0D2118;--gray:#4A6854;--border:rgba(27,77,46,0.15);--gold:#C8971F}
-body{cursor:none;background:var(--white);color:var(--dark);font-family:'Work Sans',sans-serif;overflow-x:hidden}
+:root{--green:#1B4D2E;--green2:#2D7A48;--green3:#0F2E1C;--lime:#5CB85C;--lime2:#7DD17D;--white:#F8FDF9;--dark:#0D2118;--gray:#4A6854;--gray2:#7B9683;--border:rgba(27,77,46,0.15);--gold:#C8971F;--earth:#5C3E20;--earth2:#3D2A15;--earth3:#856B47;--water:#5FA8D5}
+body{background:var(--white);color:var(--dark);font-family:'Work Sans',sans-serif;overflow-x:hidden}
+.scroll-bar{position:fixed;top:0;left:0;height:2px;width:0;background:var(--lime);z-index:200;transition:width .12s linear}
+
+/* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;height:68px;padding:0 3rem;display:flex;align-items:center;justify-content:space-between;background:var(--green);border-bottom:3px solid var(--lime)}
-.logo{font-weight:900;font-size:1.3rem;color:#fff;letter-spacing:3px}
+.logo{font-weight:900;font-size:1.3rem;color:#fff;letter-spacing:3px;white-space:nowrap}
 .logo em{color:var(--lime);font-style:normal}
 .nav-links{display:flex;gap:2.5rem;list-style:none}
-.nav-links a{font-size:.75rem;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.55);text-decoration:none;transition:color .2s}
+.nav-links a{font-size:.75rem;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.6);text-decoration:none;transition:color .2s;font-weight:600}
 .nav-links a:hover{color:var(--lime)}
-.nav-cta{background:var(--lime);color:#fff;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;padding:10px 22px;border:none;cursor:pointer;font-family:'Work Sans',sans-serif;font-weight:700;transition:all .2s;text-decoration:none}
-.nav-cta:hover{background:#6ec96e}
-.hero{background:var(--dark);min-height:100vh;display:grid;grid-template-columns:1.2fr 1fr;padding-top:68px}
-.hero-left{padding:5rem 4rem;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
-.hero-left::after{content:'SCC';position:absolute;right:-2rem;bottom:-2rem;font-weight:900;font-size:14rem;color:rgba(92,184,92,0.04);pointer-events:none;line-height:1;letter-spacing:-4px}
-.vet-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(200,151,31,0.15);border:1px solid rgba(200,151,31,0.3);color:var(--gold);font-size:.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:6px 14px;margin-bottom:2rem;width:fit-content}
-h1{font-weight:900;font-size:clamp(3rem,6vw,6rem);line-height:.95;color:#fff;margin-bottom:1.5rem;letter-spacing:-1px}
-h1 span{color:var(--lime)}
-.hero-sub{font-size:.93rem;color:rgba(255,255,255,.5);line-height:1.9;font-weight:300;max-width:420px;margin-bottom:3rem}
-.btns{display:flex;gap:1rem}
-.btn-l{background:var(--lime);color:#fff;font-size:.78rem;letter-spacing:2px;text-transform:uppercase;padding:14px 30px;border:none;cursor:pointer;font-family:'Work Sans',sans-serif;font-weight:700;transition:all .2s;text-decoration:none;display:inline-block}
-.btn-l:hover{background:#6ec96e}
-.btn-ow{background:transparent;color:#fff;font-size:.78rem;letter-spacing:2px;text-transform:uppercase;padding:13px 30px;border:1px solid rgba(255,255,255,.2);cursor:pointer;font-family:'Work Sans',sans-serif;transition:all .2s;text-decoration:none;display:inline-block}
-.btn-ow:hover{border-color:var(--lime);color:var(--lime)}
-.hero-right{background:var(--green);padding:5rem 3rem;display:flex;flex-direction:column;justify-content:center;gap:1.5rem}
-.trust-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);padding:1.8rem;border-bottom:3px solid var(--lime)}
-.tc-title{font-weight:700;color:#fff;font-size:.95rem;margin-bottom:.3rem}
-.tc-desc{font-size:.82rem;color:rgba(255,255,255,.5);line-height:1.6;font-weight:300}
-.strip{background:var(--lime);padding:.7rem 0;overflow:hidden}
-.st{display:flex;animation:scroll 16s linear infinite;white-space:nowrap}
-.si{font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:#fff;padding:0 2.5rem;font-weight:700}
-@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-.section{padding:6rem 3rem;max-width:1200px;margin:0 auto}
-.eyebrow{font-size:.68rem;letter-spacing:3px;text-transform:uppercase;color:var(--green2);font-weight:700;margin-bottom:.8rem}
-.title{font-weight:900;font-size:clamp(2.2rem,4.5vw,4.5rem);line-height:.95;margin-bottom:1.5rem;letter-spacing:-1px}
-.title span{color:var(--green)}
-.svcs{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);margin-top:4rem}
-.svc{background:var(--white);padding:2.5rem;transition:background .2s;position:relative}
-.svc:hover{background:#EBF5ED}
-.svc::before{content:'';position:absolute;top:0;left:0;width:100%;height:3px;background:transparent;transition:background .3s}
-.svc:hover::before{background:var(--lime)}
-.svc-icon{font-size:2rem;margin-bottom:1rem}
-.svc-name{font-weight:700;font-size:1rem;letter-spacing:.5px;margin-bottom:.5rem}
-.svc-desc{font-size:.82rem;color:var(--gray);line-height:1.7;font-weight:300}
-.discounts{background:var(--gold);padding:.5rem 3rem;text-align:center}
-.discounts p{font-size:.78rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#fff}
-.stats-section{background:var(--dark);padding:5rem 3rem;display:grid;grid-template-columns:repeat(4,1fr)}
-.stat{padding:2.5rem;border-right:1px solid rgba(255,255,255,.06);text-align:center}
-.stat:last-child{border-right:none}
-.sn{font-weight:900;font-size:3rem;color:var(--lime);line-height:1}
-.sl{font-size:.65rem;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-top:.3rem}
-.revs{background:#EBF5ED;padding:6rem 3rem}
-.ri{max-width:1200px;margin:0 auto}
-.rg{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:4rem}
-.rev{background:#fff;padding:2.5rem;border:1px solid var(--border)}
-.rev-stars{color:var(--green2);letter-spacing:2px;margin-bottom:1rem;font-size:.85rem}
-.rev-text{font-size:.86rem;color:var(--gray);line-height:1.9;font-style:italic;margin-bottom:1.5rem}
-.rev-author{font-size:.68rem;letter-spacing:2px;text-transform:uppercase;color:var(--green2);font-weight:700}
-.cta{background:var(--green);padding:7rem 3rem;text-align:center}
-.cta h2{font-weight:900;font-size:clamp(2.5rem,7vw,7rem);color:#fff;line-height:.95;letter-spacing:-2px;margin-bottom:1.5rem}
-.cta p{color:rgba(255,255,255,.55);font-size:.93rem;max-width:400px;margin:0 auto 3rem;line-height:1.9}
-.cta-ph{font-weight:900;font-size:2.5rem;color:var(--lime);display:block;margin-bottom:2rem;text-decoration:none;letter-spacing:-1px}
+.nav-cta{background:var(--lime);color:#fff;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;padding:11px 22px;border:none;cursor:pointer;font-family:'Work Sans',sans-serif;font-weight:700;transition:all .2s;text-decoration:none}
+.nav-cta:hover{background:var(--lime2)}
+
+/* ============ SCROLLYTELLING HERO ============ */
+.story{position:relative;height:600vh;background:var(--dark)}
+.story-pin{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;align-items:center;justify-content:center}
+#storyCanvas{position:absolute;inset:0;width:100%;height:100%;z-index:1}
+.story-vignette{position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 30%,rgba(0,0,0,.55) 100%);z-index:2;pointer-events:none}
+
+.beat{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:6rem 3rem 4rem;z-index:3;pointer-events:none;opacity:0;transform:translateY(20px);transition:opacity .8s cubic-bezier(.22,1,.36,1),transform .8s cubic-bezier(.22,1,.36,1)}
+.beat.in{opacity:1;transform:translateY(0);pointer-events:auto}
+.beat-inner{max-width:1100px;width:100%;margin:0 auto}
+.beat-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(200,151,31,.2);border:1px solid rgba(200,151,31,.5);color:var(--gold);font-size:.7rem;font-weight:800;letter-spacing:3px;text-transform:uppercase;padding:7px 16px;margin-bottom:2rem;backdrop-filter:blur(4px)}
+.beat-h1{font-weight:900;font-size:clamp(3.5rem,9vw,9rem);line-height:.93;color:#fff;letter-spacing:-2px;margin-bottom:1.5rem;text-shadow:0 4px 24px rgba(0,0,0,.7),0 2px 6px rgba(0,0,0,.5)}
+.beat-h1 span{color:var(--lime);display:block;text-shadow:0 4px 24px rgba(0,0,0,.7),0 0 30px rgba(92,184,92,.3)}
+.beat-sub{font-size:1rem;color:#fff;line-height:1.85;max-width:560px;margin-bottom:2.5rem;font-weight:400;text-shadow:0 2px 8px rgba(0,0,0,.85)}
+.beat-stat{display:flex;gap:3rem;margin-top:2rem;flex-wrap:wrap}
+.beat-stat-item{display:flex;flex-direction:column;color:#fff}
+.bs-num{font-weight:900;font-size:2.5rem;color:var(--lime);line-height:1;text-shadow:0 4px 16px rgba(0,0,0,.5)}
+.bs-label{font-size:.7rem;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.7);font-weight:700;margin-top:.4rem}
+
+.beat-1 .beat-inner{text-align:left}
+.beat-2 .beat-inner{text-align:right;margin-left:auto}
+.beat-3 .beat-inner{text-align:left}
+.beat-4 .beat-inner{text-align:center}
+.beat-5 .beat-inner{text-align:right;margin-left:auto}
+.beat-6 .beat-inner{text-align:center;padding-bottom:5rem}
+
+.beat-rail{position:absolute;right:2rem;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:1.4rem;z-index:5;align-items:flex-end}
+.brail-dot{display:flex;align-items:center;gap:14px;color:rgba(255,255,255,.5);font-size:.6rem;letter-spacing:2.5px;text-transform:uppercase;font-weight:700;cursor:pointer;transition:color .3s}
+.brail-dot::after{content:'';width:8px;height:8px;background:rgba(255,255,255,.3);transition:all .3s}
+.brail-dot.active{color:var(--lime)}
+.brail-dot.active::after{background:var(--lime);transform:scale(1.5);box-shadow:0 0 16px rgba(92,184,92,.6)}
+
+.btn-l{background:var(--lime);color:#fff;font-size:.78rem;letter-spacing:2px;text-transform:uppercase;padding:15px 32px;border:none;cursor:pointer;font-family:'Work Sans',sans-serif;font-weight:700;transition:all .2s;text-decoration:none;display:inline-block}
+.btn-l:hover{background:var(--lime2);transform:translateY(-2px)}
+.btn-ow{background:rgba(255,255,255,.08);backdrop-filter:blur(4px);color:#fff;font-size:.78rem;letter-spacing:2px;text-transform:uppercase;padding:14px 32px;border:1px solid rgba(255,255,255,.35);cursor:pointer;font-family:'Work Sans',sans-serif;font-weight:600;transition:all .2s;text-decoration:none;display:inline-block}
+.btn-ow:hover{background:#fff;color:var(--dark);border-color:#fff}
 .btn-w{background:#fff;color:var(--green);font-size:.8rem;letter-spacing:2px;text-transform:uppercase;padding:16px 48px;border:none;cursor:pointer;font-family:'Work Sans',sans-serif;font-weight:700;transition:all .2s;display:inline-block;text-decoration:none}
 .btn-w:hover{background:var(--lime);color:#fff}
-footer{background:var(--dark);padding:2rem 3rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
-.fl{font-weight:900;color:var(--lime);font-size:1rem;letter-spacing:2px}
-.fc{font-size:.68rem;letter-spacing:1px;color:rgba(255,255,255,.3)}
-@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-.fi{opacity:0;animation:fadeUp .7s ease forwards}
-.d1{animation-delay:.1s}.d2{animation-delay:.25s}.d3{animation-delay:.4s}
-@media(max-width:900px){.hero{grid-template-columns:1fr;padding-top:68px}.hero-right{display:none}.nav-links{display:none}.section,.revs,.cta{padding:4rem 1.5rem}.svcs,.rg{grid-template-columns:1fr}.stats-section{grid-template-columns:1fr 1fr}}
-.cur{color:var(--lime);position:fixed;width:8px;height:8px;background:currentColor;border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:transform .1s}.cur-ring{position:fixed;width:32px;height:32px;border:1.5px solid currentColor;border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:all .15s ease;opacity:.5}
-.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:10000;align-items:center;justify-content:center}.modal-overlay.active{display:flex}.modal-box{background:#fff;max-width:400px;width:90%;padding:2.5rem;text-align:center;position:relative;animation:popIn .25s ease}.modal-box h3{font-size:1.2rem;color:#1a1a1a;margin-bottom:.5rem;font-weight:700}.modal-box p{font-size:.85rem;color:#666;line-height:1.6;margin-bottom:1.5rem}.modal-phone{font-size:1.8rem;font-weight:900;color:#1B4D2E;display:block;margin-bottom:1rem;text-decoration:none}.modal-addr{font-size:.82rem;color:#888;margin-bottom:1.5rem}.modal-btns{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap}.modal-btn-call{background:#1B4D2E;color:#fff;padding:12px 28px;border:none;cursor:pointer;font-weight:700;font-size:.82rem;letter-spacing:1px;text-transform:uppercase;text-decoration:none;display:inline-block}.modal-btn-map{background:transparent;color:#1B4D2E;padding:11px 28px;border:1.5px solid #1B4D2E;cursor:pointer;font-weight:700;font-size:.82rem;letter-spacing:1px;text-transform:uppercase;text-decoration:none;display:inline-block}.modal-close{position:absolute;top:1rem;right:1rem;background:none;border:none;font-size:1.5rem;cursor:pointer;color:#999;line-height:1}@keyframes popIn{from{opacity:0;transform:scale(.9)}to{opacity:1;transform:scale(1)}}
+.beat-btns{display:flex;gap:1rem;flex-wrap:wrap}
+.beat-1 .beat-btns,.beat-3 .beat-btns{justify-content:flex-start}
+.beat-2 .beat-btns,.beat-5 .beat-btns{justify-content:flex-end}
+.beat-4 .beat-btns,.beat-6 .beat-btns{justify-content:center}
+
+.magnetic{transition:transform .3s cubic-bezier(.2,.7,.3,1)}
+.magnetic-inner{display:inline-block;transition:transform .3s cubic-bezier(.2,.7,.3,1);pointer-events:none}
+
+/* DISCOUNTS BANNER (signature element for veteran-owned biz) */
+.discounts{background:var(--gold);padding:.8rem 3rem;text-align:center;position:relative;z-index:4}
+.discounts p{font-size:.78rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#fff}
+
+/* MARQUEE */
+.strip{background:var(--lime);padding:.8rem 0;overflow:hidden;position:relative;z-index:4}
+.st{display:flex;animation:scroll 18s linear infinite;white-space:nowrap}
+.si{font-size:.72rem;letter-spacing:3px;text-transform:uppercase;color:#fff;padding:0 2.5rem;font-weight:700;display:flex;align-items:center;gap:2.5rem}
+.si::after{content:'★';opacity:.7;font-size:.65rem}
+@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* SECTIONS */
+.section{padding:7rem 3rem;max-width:1300px;margin:0 auto}
+.eyebrow{font-size:.68rem;letter-spacing:4px;text-transform:uppercase;color:var(--green2);font-weight:800;margin-bottom:1rem;display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:'';width:32px;height:1px;background:var(--green2)}
+.title{font-weight:900;font-size:clamp(2.5rem,5vw,5rem);line-height:1;margin-bottom:1.5rem;letter-spacing:-1.5px}
+.title span{color:var(--green)}
+
+.svcs{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);margin-top:4rem}
+.svc{background:var(--white);padding:2.5rem;transition:all .3s;position:relative;border-top:3px solid transparent}
+.svc:hover{background:#EBF5ED;border-top-color:var(--lime);transform:translateY(-3px)}
+.svc-icon{width:48px;height:48px;background:var(--green);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--lime);margin-bottom:1.2rem;transition:background .3s}
+.svc:hover .svc-icon{background:var(--green2)}
+.svc-icon svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.8}
+.svc-name{font-weight:800;font-size:1.05rem;letter-spacing:.5px;margin-bottom:.6rem}
+.svc-desc{font-size:.85rem;color:var(--gray);line-height:1.8;font-weight:400}
+
+/* STATS */
+.stats-section{background:var(--dark);padding:5rem 3rem;display:grid;grid-template-columns:repeat(4,1fr);position:relative;overflow:hidden}
+.stats-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(92,184,92,.05),transparent 70%);pointer-events:none}
+.stat{padding:2.5rem;border-right:1px solid rgba(255,255,255,.06);text-align:center;position:relative}
+.stat:last-child{border-right:none}
+.sn{font-weight:900;font-size:3.2rem;color:var(--lime);line-height:1}
+.sl{font-size:.68rem;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.45);margin-top:.4rem;font-weight:700}
+
+/* REVIEWS */
+.revs{background:#EBF5ED;padding:7rem 3rem}
+.ri{max-width:1300px;margin:0 auto}
+.rg{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:4rem}
+.rev{background:#fff;padding:2.5rem;border:1px solid var(--border);transition:transform .3s,box-shadow .3s}
+.rev:hover{transform:translateY(-3px);box-shadow:0 16px 32px rgba(27,77,46,.1)}
+.rev-stars{color:var(--green2);letter-spacing:2px;margin-bottom:1rem;font-size:.9rem}
+.rev-text{font-size:.88rem;color:var(--gray);line-height:1.9;font-style:italic;margin-bottom:1.5rem}
+.rev-author{font-size:.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--green2);font-weight:800}
+
+/* BOOKING */
+.booking-section{background:var(--white);padding:7rem 3rem;border-top:1px solid var(--border)}
+.booking-inner{max-width:1300px;margin:0 auto;display:grid;grid-template-columns:1fr 1.4fr;gap:5rem;align-items:start}
+.booking-side p{font-size:.95rem;color:var(--gray);line-height:1.85;margin-bottom:2rem;max-width:380px}
+.booking-side a{color:var(--green);text-decoration:none;font-weight:800}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.form-group{display:flex;flex-direction:column;margin-bottom:1.1rem}
+.form-group label{font-size:.65rem;letter-spacing:2px;text-transform:uppercase;color:var(--green);font-weight:800;margin-bottom:.5rem}
+.form-group input,.form-group select,.form-group textarea{background:#fff;border:1px solid var(--border);color:var(--dark);font-family:'Work Sans',sans-serif;font-size:.93rem;padding:.9rem 1rem;outline:none;transition:border-color .2s;-webkit-appearance:none;border-radius:4px}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--lime)}
+.booking-success{padding:2rem 0}
+
+/* CTA */
+.cta{background:var(--green);padding:8rem 3rem;text-align:center;position:relative;overflow:hidden}
+.cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(200,151,31,.08),transparent 60%);pointer-events:none}
+.cta>*{position:relative;z-index:1}
+.cta h2{font-weight:900;font-size:clamp(3rem,8vw,8rem);color:#fff;line-height:.95;letter-spacing:-2px;margin-bottom:1.5rem}
+.cta p{color:rgba(255,255,255,.7);font-size:1rem;max-width:440px;margin:0 auto 3rem;line-height:1.9;font-weight:400}
+.cta-ph{font-weight:900;font-size:2.8rem;color:var(--lime);display:block;margin-bottom:2rem;text-decoration:none;letter-spacing:-1px}
+
+footer{background:var(--dark);padding:2.2rem 3rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.fl{font-weight:900;color:var(--lime);font-size:1.05rem;letter-spacing:2px}
+.fc{font-size:.72rem;letter-spacing:1px;color:rgba(255,255,255,.4)}
+
+/* MODAL */
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.78);z-index:10000;align-items:center;justify-content:center}
+.modal-overlay.active{display:flex}
+.modal-box{background:#fff;max-width:420px;width:90%;padding:2.5rem;text-align:center;position:relative;animation:popIn .25s ease}
+.modal-box h3{font-size:1.3rem;color:var(--dark);margin-bottom:.5rem;font-weight:900;letter-spacing:1px}
+.modal-box p{font-size:.85rem;color:#666;line-height:1.6;margin-bottom:1.5rem}
+.modal-phone{font-size:2rem;font-weight:900;color:var(--green);display:block;margin-bottom:1rem;text-decoration:none;letter-spacing:-1px}
+.modal-addr{font-size:.82rem;color:#888;margin-bottom:1.5rem}
+.modal-btns{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap}
+.modal-btn-call{background:var(--green);color:#fff;padding:12px 28px;border:none;cursor:pointer;font-weight:700;font-size:.82rem;letter-spacing:1px;text-transform:uppercase;text-decoration:none;display:inline-block}
+.modal-btn-map{background:transparent;color:var(--green);padding:11px 28px;border:1.5px solid var(--green);cursor:pointer;font-weight:700;font-size:.82rem;letter-spacing:1px;text-transform:uppercase;text-decoration:none;display:inline-block}
+.modal-close{position:absolute;top:1rem;right:1rem;background:none;border:none;font-size:1.5rem;cursor:pointer;color:#999;line-height:1}
+@keyframes popIn{from{opacity:0;transform:scale(.9)}to{opacity:1;transform:scale(1)}}
+
+/* ============ GALLERY: HOVER-REVEAL MASONRY ============ */
+.gallery-section{background:#EBF5ED;padding:7rem 3rem;border-top:1px solid var(--border)}
+.gallery-inner{max-width:1300px;margin:0 auto}
+.gallery-inner>p{font-size:.95rem;color:var(--gray);line-height:1.85;max-width:560px;margin-top:1rem}
+.masonry{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:170px;gap:1rem;margin-top:4rem}
+.mtile{position:relative;overflow:hidden;background:var(--dark);border-radius:8px;cursor:pointer}
+.mtile.tall{grid-row:span 2}.mtile.wide{grid-column:span 2}
+.mtile-bg{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform 1s cubic-bezier(.22,1,.36,1),filter .8s ease;filter:grayscale(.4) brightness(.7)}
+.mtile:hover .mtile-bg{transform:scale(1.08);filter:grayscale(0) brightness(1)}
+.mtile-fallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--lime);font-weight:900;font-size:1.2rem;letter-spacing:3px;background:linear-gradient(135deg,#0d2118,#1b4d2e)}
+.mtile-mask{position:absolute;inset:0;background:linear-gradient(transparent 50%,rgba(13,33,24,.95));z-index:2;display:flex;flex-direction:column;justify-content:flex-end;padding:1.5rem;opacity:0;transform:translateY(15%);transition:opacity .5s,transform .55s cubic-bezier(.22,1,.36,1)}
+.mtile:hover .mtile-mask{opacity:1;transform:translateY(0)}
+.mtile-cat{font-size:.62rem;letter-spacing:3px;text-transform:uppercase;color:var(--lime);font-weight:800;margin-bottom:.3rem}
+.mtile-name{font-weight:900;font-size:1.1rem;color:#fff;line-height:1.2}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .gallery-section{padding:5rem 1.5rem}
+  .masonry{grid-template-columns:repeat(2,1fr);grid-auto-rows:140px}
+  .mtile.wide{grid-column:span 2}.mtile.tall{grid-row:span 1}
+  nav{padding:0 1.5rem;height:60px}
+  .nav-links{display:none}
+  .story{height:auto}
+  .story-pin{position:relative;height:auto;display:block;padding:5rem 0}
+  #storyCanvas{position:relative;width:100%;height:60vh;display:block}
+  .beat{position:relative;opacity:1;transform:none;padding:3rem 1.5rem;pointer-events:auto;justify-content:flex-start}
+  .beat-inner{text-align:left!important;margin-left:0!important}
+  .beat-rail{display:none}
+  .section,.revs,.cta,.booking-section{padding:5rem 1.5rem}
+  .stats-section{grid-template-columns:1fr 1fr;padding:3rem 1.5rem}
+  .svcs,.rg,.booking-inner{grid-template-columns:1fr;gap:3rem}
+  .form-row{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
+<div class="scroll-bar" id="scrollBar"></div>
+
 <nav>
   <div class="logo">SCC <em>LAWN</em></div>
   <ul class="nav-links">
     <li><a href="#services">Services</a></li>
     <li><a href="#reviews">Reviews</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#booking">Quote</a></li>
   </ul>
-  <a href="tel:6364856004" class="nav-cta" onclick="if(window.innerWidth>768){event.preventDefault();openBookModal()}">Free Quote</a>
+  <a href="tel:6364856004" class="nav-cta magnetic" onclick="if(window.innerWidth>768){event.preventDefault();openBookModal()}">Free Quote</a>
 </nav>
 
-<div class="hero">
-  <div class="hero-left">
-    <div class="vet-badge fi d1">🎖️ Veteran Owned · O'Fallon, MO</div>
-    <h1 class="fi d2">Lawn Care<br>Done <span>Right.</span></h1>
-    <p class="hero-sub fi d3">SCC Lawn Care is a veteran-owned lawn service built on military precision and customer satisfaction. Devan and his team deliver perfect results every time.</p>
-    <div class="btns fi d3">
-      <a href="tel:6364856004" class="btn-l" onclick="if(window.innerWidth>768){event.preventDefault();openBookModal()}">Get Free Quote</a>
-      <a href="#services" class="btn-ow">Our Services</a>
+<!-- SCROLLYTELLING HERO: underground science narrative -->
+<section class="story">
+  <div class="story-pin">
+    <canvas id="storyCanvas"></canvas>
+    <div class="story-vignette"></div>
+
+    <div class="beat-rail" id="beatRail">
+      <div class="brail-dot active" data-beat="0">The Soil</div>
+      <div class="brail-dot" data-beat="1">Water</div>
+      <div class="brail-dot" data-beat="2">Roots</div>
+      <div class="brail-dot" data-beat="3">Growth</div>
+      <div class="brail-dot" data-beat="4">Surface</div>
+      <div class="brail-dot" data-beat="5">Call Us</div>
+    </div>
+
+    <div class="beat beat-1 in">
+      <div class="beat-inner">
+        <div class="beat-tag">🎖️ Veteran-Owned · O'Fallon, MO</div>
+        <h1 class="beat-h1">Lawn Care<span>Done Right.</span></h1>
+        <p class="beat-sub">SCC Lawn Care is a veteran-owned lawn service built on military precision and customer satisfaction. Devan and his team deliver perfect results every single visit.</p>
+        <div class="beat-btns">
+          <a href="tel:6364856004" class="btn-l magnetic" onclick="if(window.innerWidth>768){event.preventDefault();openBookModal()}"><span class="magnetic-inner">Get Free Quote</span></a>
+          <a href="#services" class="btn-ow magnetic"><span class="magnetic-inner">Our Services</span></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="beat beat-2">
+      <div class="beat-inner">
+        <div class="beat-tag">Step 1 · It Starts Underground</div>
+        <h1 class="beat-h1">Healthy Soil.<span>Healthy Lawn.</span></h1>
+        <p class="beat-sub" style="margin-left:auto">Most lawn companies mow and leave. SCC starts with what's underneath — aeration that actually reaches root depth, professional overseeding, and the patience to do it right.</p>
+        <div class="beat-stat" style="justify-content:flex-end">
+          <div class="beat-stat-item"><div class="bs-num">4.8★</div><div class="bs-label">Google · 63 Reviews</div></div>
+          <div class="beat-stat-item"><div class="bs-num">7</div><div class="bs-label">Days Available</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="beat beat-3">
+      <div class="beat-inner">
+        <div class="beat-tag">Step 2 · Core Aeration</div>
+        <h1 class="beat-h1">Reach The<span>Root Zone.</span></h1>
+        <p class="beat-sub">Devan's aeration is deep, even, and professional — not the surface-spike fake aeration most companies do. Customers see real results all season because of it.</p>
+      </div>
+    </div>
+
+    <div class="beat beat-4">
+      <div class="beat-inner">
+        <div class="beat-tag">Step 3 · Overseed &amp; Grow</div>
+        <h1 class="beat-h1">Thick. Even.<span>Resilient.</span></h1>
+        <p class="beat-sub" style="margin:0 auto 2rem">Paired with aeration, overseeding fills in thin spots and crowds out weeds. Your lawn gets denser, greener, and harder to kill.</p>
+        <div class="beat-btns" style="justify-content:center">
+          <a href="#services" class="btn-l magnetic"><span class="magnetic-inner">See All Services</span></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="beat beat-5">
+      <div class="beat-inner">
+        <div class="beat-tag">Step 4 · The Result</div>
+        <h1 class="beat-h1">Mowed Weekly.<span>Sharp Edges.</span></h1>
+        <p class="beat-sub" style="margin-left:auto">Once the foundation's solid, weekly mowing keeps it looking sharp. Trim, edge, blow down — same precision every visit. Veteran-owned reliability.</p>
+        <div class="beat-stat" style="justify-content:flex-end">
+          <div class="beat-stat-item"><div class="bs-num">Vet</div><div class="bs-label">Owned &amp; Operated</div></div>
+          <div class="beat-stat-item"><div class="bs-num">7</div><div class="bs-label">Days a Week</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="beat beat-6">
+      <div class="beat-inner">
+        <div class="beat-tag">Ready to Start?</div>
+        <h1 class="beat-h1">Text Devan.</h1>
+        <a href="tel:6364856004" style="font-weight:900;font-size:clamp(2.5rem,5vw,4rem);color:var(--lime);text-decoration:none;display:block;margin:1.5rem 0;letter-spacing:-1px;text-shadow:0 4px 24px rgba(0,0,0,.5)">(636) 485-6004</a>
+        <div class="beat-btns" style="justify-content:center">
+          <a href="tel:6364856004" class="btn-l magnetic" onclick="if(window.innerWidth>768){event.preventDefault();openBookModal()}"><span class="magnetic-inner">Free Quote</span></a>
+          <a href="#booking" class="btn-ow magnetic"><span class="magnetic-inner">Send a Note</span></a>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="hero-right">
-    <div class="trust-card fi d2"><div class="tc-title">⭐ 4.8 Stars · 63 Reviews</div><div class="tc-desc">Consistently top-rated by O'Fallon and St. Charles homeowners who trust Devan with their yards.</div></div>
-    <div class="trust-card fi d3"><div class="tc-title">🎖️ Veteran Owned</div><div class="tc-desc">Devan started with a push mower and a dream after leaving the Marines. Now serving his community with pride.</div></div>
-    <div class="trust-card"><div class="tc-title">💬 Responds Instantly</div><div class="tc-desc">Text Devan and he responds immediately. No voicemail black holes — real communication.</div></div>
-    <div class="trust-card"><div class="tc-title">🏡 Discounts Available</div><div class="tc-desc">Veterans, active-duty, first responders, and teachers get special pricing — always.</div></div>
-  </div>
-</div>
+</section>
 
 <div class="discounts"><p>🎖️ Veterans &amp; Military · 🚒 First Responders · 📚 Teachers — All Receive Special Discounts</p></div>
 
 <div class="strip">
   <div class="st">
-    <div class="si">Lawn Mowing ·</div><div class="si">Trimming &amp; Edging ·</div><div class="si">Aeration ·</div><div class="si">Overseeding ·</div><div class="si">Core Aeration ·</div><div class="si">Leaf Cleanup ·</div>
-    <div class="si">Lawn Mowing ·</div><div class="si">Trimming &amp; Edging ·</div><div class="si">Aeration ·</div><div class="si">Overseeding ·</div><div class="si">Core Aeration ·</div><div class="si">Leaf Cleanup ·</div>
+    <div class="si">Weekly Mowing</div><div class="si">Trimming &amp; Edging</div><div class="si">Core Aeration</div><div class="si">Overseeding</div><div class="si">Leaf Cleanup</div><div class="si">Snow Removal</div>
+    <div class="si">Weekly Mowing</div><div class="si">Trimming &amp; Edging</div><div class="si">Core Aeration</div><div class="si">Overseeding</div><div class="si">Leaf Cleanup</div><div class="si">Snow Removal</div>
   </div>
 </div>
 
+<!-- SERVICES -->
 <div class="section" id="services">
   <div class="eyebrow">Services</div>
-  <h2 class="title">What We <span>Provide</span></h2>
+  <h2 class="title" data-split>What We <span>Provide.</span></h2>
   <div class="svcs">
-    <div class="svc"><div class="svc-icon">🌿</div><div class="svc-name">Weekly Mowing</div><div class="svc-desc">Consistent weekly cuts with professional trimming, edging, and blowdown. Same quality every visit.</div></div>
-    <div class="svc"><div class="svc-icon">✂️</div><div class="svc-name">Trimming &amp; Edging</div><div class="svc-desc">Crisp, clean edges along beds, sidewalks, and driveways. The detail work that makes a yard look sharp.</div></div>
-    <div class="svc"><div class="svc-icon">🪱</div><div class="svc-name">Core Aeration</div><div class="svc-desc">Deep, professional aeration that actually works. Devan is an expert — customers see results all season.</div></div>
-    <div class="svc"><div class="svc-icon">🌱</div><div class="svc-name">Overseeding</div><div class="svc-desc">Thicken up thin spots and rejuvenate your lawn. Paired with aeration for maximum results.</div></div>
-    <div class="svc"><div class="svc-icon">🍂</div><div class="svc-name">Leaf Cleanup</div><div class="svc-desc">Fall leaf removal — we bag it, haul it, and leave your yard clean heading into winter.</div></div>
-    <div class="svc"><div class="svc-icon">❄️</div><div class="svc-name">Snow Removal</div><div class="svc-desc">Driveway and walkway clearing after snowfall. Same reliability and attention to detail.</div></div>
+    <div class="svc"><div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M2 22h20M3 17l9-12 9 12M7 22V13"/></svg></div><div class="svc-name">Weekly Mowing</div><div class="svc-desc">Consistent weekly cuts with professional trimming, edging, and blowdown. Same quality every visit.</div></div>
+    <div class="svc"><div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M14 2l-4 4-4-4M10 18l-4-4 4-4M14 18l4-4-4-4"/></svg></div><div class="svc-name">Trimming &amp; Edging</div><div class="svc-desc">Crisp, clean edges along beds, sidewalks, and driveways. The detail work that makes a yard look sharp.</div></div>
+    <div class="svc"><div class="svc-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg></div><div class="svc-name">Core Aeration</div><div class="svc-desc">Deep, professional aeration that actually works. Devan is an expert — customers see results all season.</div></div>
+    <div class="svc"><div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M12 22V8M8 4a4 4 0 014-2 4 4 0 014 2"/><path d="M5 14c0-3 3-5 7-5s7 2 7 5"/></svg></div><div class="svc-name">Overseeding</div><div class="svc-desc">Thicken up thin spots and rejuvenate your lawn. Paired with aeration for maximum results.</div></div>
+    <div class="svc"><div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M5 10c0-3 3-6 7-6s7 3 7 6c0 4-7 11-7 11s-7-7-7-11z"/></svg></div><div class="svc-name">Leaf Cleanup</div><div class="svc-desc">Fall leaf removal — we bag it, haul it, and leave your yard clean heading into winter.</div></div>
+    <div class="svc"><div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M2 12h20M2 6h20M2 18h20"/></svg></div><div class="svc-name">Snow Removal</div><div class="svc-desc">Driveway and walkway clearing after snowfall. Same reliability and attention to detail.</div></div>
   </div>
 </div>
 
+<!-- GALLERY: Hover-reveal masonry -->
+<section class="gallery-section" id="gallery">
+  <div class="gallery-inner">
+    <div class="eyebrow">Recent Work</div>
+    <h2 class="title" data-split>The Devan <span>Difference.</span></h2>
+    <p>Hover any tile to see the detail. Aeration, overseeding, mowing, edge work — every job photographed the day it was completed.</p>
+    <div class="masonry">
+      <div class="mtile tall"><div class="mtile-fallback">SCC · 01</div><div class="mtile-bg" style="background-image:url('https://images.unsplash.com/photo-1558904541-efa843a96f01?w=900&q=80&auto=format&fit=crop')"></div><div class="mtile-mask"><div class="mtile-cat">Core Aeration</div><div class="mtile-name">Deep Root Zone</div></div></div>
+      <div class="mtile wide"><div class="mtile-fallback">SCC · 02</div><div class="mtile-bg" style="background-image:url('https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?w=900&q=80&auto=format&fit=crop')"></div><div class="mtile-mask"><div class="mtile-cat">Weekly Mow</div><div class="mtile-name">Sharp Lines, Even Cut</div></div></div>
+      <div class="mtile"><div class="mtile-fallback">SCC · 03</div><div class="mtile-bg" style="background-image:url('https://images.unsplash.com/photo-1605276373954-0c4a0dac5b12?w=900&q=80&auto=format&fit=crop')"></div><div class="mtile-mask"><div class="mtile-cat">Edge Detail</div><div class="mtile-name">Sidewalk Trim</div></div></div>
+      <div class="mtile"><div class="mtile-fallback">SCC · 04</div><div class="mtile-bg" style="background-image:url('https://images.unsplash.com/photo-1530541930197-ff16ac917b0e?w=900&q=80&auto=format&fit=crop')"></div><div class="mtile-mask"><div class="mtile-cat">Bed Refresh</div><div class="mtile-name">Mulch + Trim</div></div></div>
+      <div class="mtile tall"><div class="mtile-fallback">SCC · 05</div><div class="mtile-bg" style="background-image:url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=900&q=80&auto=format&fit=crop')"></div><div class="mtile-mask"><div class="mtile-cat">Overseeding</div><div class="mtile-name">Fall Renewal</div></div></div>
+      <div class="mtile wide"><div class="mtile-fallback">SCC · 06</div><div class="mtile-bg" style="background-image:url('https://images.unsplash.com/photo-1583847268968-f7e6e9f12f64?w=900&q=80&auto=format&fit=crop')"></div><div class="mtile-mask"><div class="mtile-cat">Whole Property</div><div class="mtile-name">Veteran Family Lawn</div></div></div>
+      <div class="mtile"><div class="mtile-fallback">SCC · 07</div><div class="mtile-bg" style="background-image:url('https://images.unsplash.com/photo-1572782252655-9c8771392601?w=900&q=80&auto=format&fit=crop')"></div><div class="mtile-mask"><div class="mtile-cat">Tools</div><div class="mtile-name">Pro Equipment</div></div></div>
+      <div class="mtile"><div class="mtile-fallback">SCC · 08</div><div class="mtile-bg" style="background-image:url('https://images.unsplash.com/photo-1551817958-d9d86fb29431?w=900&q=80&auto=format&fit=crop')"></div><div class="mtile-mask"><div class="mtile-cat">Snow Work</div><div class="mtile-name">Driveway Clear</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
 <div class="stats-section">
   <div class="stat"><div class="sn">4.8★</div><div class="sl">Google Rating</div></div>
   <div class="stat"><div class="sn">63+</div><div class="sl">Reviews</div></div>
@@ -138,10 +396,11 @@ footer{background:var(--dark);padding:2rem 3rem;display:flex;justify-content:spa
   <div class="stat"><div class="sn">7days</div><div class="sl">Available</div></div>
 </div>
 
+<!-- REVIEWS -->
 <div class="revs" id="reviews">
   <div class="ri">
     <div class="eyebrow">Reviews</div>
-    <h2 class="title">Trusted by <span>Neighbors</span></h2>
+    <h2 class="title" data-split>Trusted by <span>Neighbors.</span></h2>
     <div class="rg">
       <div class="rev"><div class="rev-stars">★★★★★</div><p class="rev-text">"If you need a guy to take care of your yard, Devan is the guy. He does amazing work. Fantastic job — I couldn't be more pleased."</p><div class="rev-author">— Google Review</div></div>
       <div class="rev"><div class="rev-stars">★★★★★</div><p class="rev-text">"The core aeration was done very professionally and deep. Devin worked with me when I had questions, responding to my text immediately. Thank you — highly recommend."</p><div class="rev-author">— Google Review</div></div>
@@ -150,29 +409,432 @@ footer{background:var(--dark);padding:2rem 3rem;display:flex;justify-content:spa
   </div>
 </div>
 
-<div class="cta" id="contact">
-  <h2>Your Best Lawn Starts Here.</h2>
+<!-- BOOKING -->
+<div class="booking-section" id="booking">
+  <div class="booking-inner">
+    <div class="booking-side">
+      <div class="eyebrow">Free Quote</div>
+      <h2 class="title" data-split>Get Your <span>Quote.</span></h2>
+      <p>Tell Devan what you need and when. He texts back fast — usually within the hour. Veteran, first responder, or teacher? Mention it for special pricing. Prefer to talk? <a href="tel:6364856004">(636) 485-6004</a>.</p>
+      <p style="font-size:.82rem;color:var(--green);font-weight:800;letter-spacing:1px;text-transform:uppercase;margin-bottom:0">★ Same-day response · Veteran-owned · Local to O'Fallon</p>
+    </div>
+    <div>
+      <form id="bookingForm" name="quote" data-netlify="true" data-netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="quote"/>
+        <div style="display:none"><input name="bot-field"/></div>
+        <div class="form-row">
+          <div class="form-group"><label for="bName">Name</label><input type="text" id="bName" name="name" required placeholder="Your name"/></div>
+          <div class="form-group"><label for="bPhone">Phone</label><input type="tel" id="bPhone" name="phone" required placeholder="(636) 000-0000"/></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label for="bService">Service</label><select id="bService" name="service" required><option value="" disabled selected>Choose...</option><option>Weekly Mowing</option><option>Trimming &amp; Edging</option><option>Core Aeration</option><option>Overseeding</option><option>Aeration + Overseeding combo</option><option>Leaf Cleanup</option><option>Snow Removal</option><option>Multiple / Not sure</option></select></div>
+          <div class="form-group"><label for="bSize">Yard Size</label><select id="bSize" name="size"><option value="" disabled selected>Approx.</option><option>Small (under 1/4 acre)</option><option>Medium (1/4–1/2 acre)</option><option>Large (1/2–1 acre)</option><option>Estate (1+ acre)</option></select></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label for="bZip">ZIP</label><input type="text" id="bZip" name="zip" placeholder="63366" pattern="[0-9]{5}"/></div>
+          <div class="form-group"><label for="bDiscount">Discount?</label><select id="bDiscount" name="discount"><option value="" disabled selected>Any apply?</option><option>None</option><option>Veteran / Military</option><option>First Responder</option><option>Teacher</option></select></div>
+        </div>
+        <div class="form-group"><label for="bNotes">Anything else?</label><textarea id="bNotes" name="notes" rows="3" placeholder="Special requests, problem areas, preferred day..."></textarea></div>
+        <button type="submit" class="btn-l magnetic" style="width:100%;padding:18px;font-size:.9rem;letter-spacing:2px"><span class="magnetic-inner">Send Quote Request</span></button>
+      </form>
+      <div id="bookingSuccess" class="booking-success" style="display:none">
+        <div class="eyebrow">Got It</div>
+        <h3 class="title" style="font-size:clamp(1.8rem,3vw,2.8rem)">We'll Be in <span>Touch.</span></h3>
+        <p style="font-size:.95rem;color:var(--gray);line-height:1.9">Devan got your request — he'll text back within the hour. Sooner? <a href="tel:6364856004" style="color:var(--green);font-weight:800;text-decoration:none">(636) 485-6004</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="cta">
+  <h2>Your Best Lawn<br>Starts Here.</h2>
   <p>Call or text Devan for a free quote. Veteran-owned, reliably priced, and available 7 days a week.</p>
   <a href="tel:6364856004" class="cta-ph">(636) 485-6004</a>
-  <a href="tel:6364856004" class="btn-w" onclick="if(window.innerWidth>768){event.preventDefault();openBookModal()}">Text or Call Now</a>
+  <a href="tel:6364856004" class="btn-w magnetic" onclick="if(window.innerWidth>768){event.preventDefault();openBookModal()}"><span class="magnetic-inner">Text or Call Now</span></a>
 </div>
 
 <footer>
   <div class="fl">SCC LAWN CARE</div>
-  <div class="fc">© 2026 SCC Lawn Care · 816 Sherwood Forest Ct, O'Fallon, MO 63366</div>
+  <div class="fc">© 2026 SCC Lawn Care · 816 Sherwood Forest Ct, O'Fallon, MO 63366 · (636) 485-6004</div>
 </footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="bookModal"><div class="modal-box"><button class="modal-close" onclick="closeModal()">&times;</button><h3>SCC Lawn Care</h3><p>Ready to start? Text Devan.</p><a href="tel:6364856004" class="modal-phone">(636) 485-6004</a><div class="modal-addr">816 Sherwood Forest Ct, O'Fallon, MO 63366</div><div class="modal-btns"><a href="tel:6364856004" class="modal-btn-call">Call Now</a><a href="https://maps.google.com/?q=816+Sherwood+Forest+Ct+OFallon+MO" target="_blank" class="modal-btn-map">Get Directions</a></div></div></div>
+<script>function openBookModal(){document.getElementById('bookModal').classList.add('active')}function closeModal(){document.getElementById('bookModal').classList.remove('active')}document.getElementById('bookModal').addEventListener('click',function(e){if(e.target===this)closeModal()});</script>
+
+<!-- CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+
+<!-- Scroll progress -->
+<script>(function(){var bar=document.getElementById('scrollBar');function upd(){var h=document.documentElement,m=h.scrollHeight-h.clientHeight;bar.style.width=(m>0?(window.scrollY/m)*100:0)+'%'}window.addEventListener('scroll',upd,{passive:true});window.addEventListener('resize',upd,{passive:true});upd()})();</script>
+
+<!-- Lenis smooth scroll -->
 <script>
-const o=new IntersectionObserver(e=>{e.forEach(i=>{if(i.isIntersecting){i.target.style.opacity='1';i.target.style.transform='translateY(0)'}})},{threshold:0.1});
-document.querySelectorAll('.svc,.rev,.trust-card,.stat').forEach(el=>{el.style.opacity='0';el.style.transform='translateY(14px)';el.style.transition='opacity .5s ease,transform .5s ease';o.observe(el)});
+(function(){if(!window.Lenis||window.matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+var lenis=new Lenis({lerp:0.07,smoothWheel:true,smoothTouch:false,wheelMultiplier:0.85,touchMultiplier:1.5});
+window.__lenis=lenis;
+if(window.gsap&&window.ScrollTrigger){gsap.registerPlugin(ScrollTrigger);lenis.on('scroll',ScrollTrigger.update);gsap.ticker.add(function(t){lenis.raf(t*1000)});gsap.ticker.lagSmoothing(0)}else{function r(t){lenis.raf(t);requestAnimationFrame(r)}requestAnimationFrame(r)}
+document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var id=a.getAttribute('href');if(id.length<2)return;var t=document.querySelector(id);if(!t)return;e.preventDefault();lenis.scrollTo(t,{offset:-60,duration:1.2})})})})();
 </script>
-<div class="cur" id="cur" style="background:#5CB85C"></div><div class="cur-ring" id="curR" style="border-color:#5CB85C"></div>
+
+<!-- ============================================================ -->
+<!-- SCROLLYTELLING: underground science narrative                 -->
+<!-- Camera starts UNDERGROUND looking at soil cross-section,     -->
+<!-- water drops fall in, roots extend down, grass grows up,      -->
+<!-- camera rotates up to surface view by the end.                -->
+<!-- ============================================================ -->
 <script>
-const C=document.getElementById("cur"),R=document.getElementById("curR");
-let mx=0,my=0,rx=0,ry=0;
-document.addEventListener("mousemove",e=>{mx=e.clientX;my=e.clientY;C.style.left=mx+"px";C.style.top=my+"px"});
-(function loop(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;R.style.left=rx+"px";R.style.top=ry+"px";requestAnimationFrame(loop)})();
-document.querySelectorAll("a,button,.svc,.svc-card,.rev,.service-card,.trust-card,.stat").forEach(el=>{el.addEventListener("mouseenter",()=>{R.style.transform="translate(-50%,-50%) scale(2.2)";R.style.opacity="0.9"});el.addEventListener("mouseleave",()=>{R.style.transform="translate(-50%,-50%) scale(1)";R.style.opacity="0.5"})});
+(function(){
+  if(!window.THREE||!window.gsap||!window.ScrollTrigger)return;
+  var canvas=document.getElementById('storyCanvas');
+  if(!canvas)return;
+  if(window.innerWidth<=900)return;
+
+  var W=canvas.offsetWidth,H=canvas.offsetHeight;
+  var renderer=new THREE.WebGLRenderer({canvas:canvas,antialias:true});
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio,1.5));
+  renderer.setSize(W,H);
+  renderer.setClearColor(0x0D2118,1);
+  renderer.shadowMap.enabled=true;
+  renderer.shadowMap.type=THREE.PCFSoftShadowMap;
+  var scene=new THREE.Scene();
+  scene.fog=new THREE.Fog(0x0D2118,30,90);
+  var camera=new THREE.PerspectiveCamera(50,W/H,0.1,300);
+
+  // LIGHTING — warm sun + cool ambient + rim. Same scheme as rjrlawn.
+  var sunLight=new THREE.DirectionalLight(0xFFE8B5,1.1);
+  sunLight.position.set(20,30,-15);
+  sunLight.castShadow=true;
+  sunLight.shadow.mapSize.width=1024;sunLight.shadow.mapSize.height=1024;
+  sunLight.shadow.camera.left=-25;sunLight.shadow.camera.right=25;
+  sunLight.shadow.camera.top=25;sunLight.shadow.camera.bottom=-25;
+  sunLight.shadow.bias=-0.0008;
+  scene.add(sunLight);
+  scene.add(new THREE.AmbientLight(0x6B8AAA,0.55));
+  var rim=new THREE.DirectionalLight(0xB0CCE8,0.35);
+  rim.position.set(-15,8,20);
+  scene.add(rim);
+
+  // --- SOIL CROSS-SECTION (stacked horizontal slabs of earth tones) ---
+  // Each layer is a wide thin BoxGeometry at a Y position
+  var soilGroup=new THREE.Group();
+  function makeLayer(y,height,color){
+    // PBR for soil — matte, slightly rough so it picks up sunlight realistically
+    var m=new THREE.Mesh(new THREE.BoxGeometry(80,height,40),new THREE.MeshStandardMaterial({color:color,roughness:0.95,metalness:0}));
+    m.position.y=y;
+    m.receiveShadow=true;
+    return m;
+  }
+  // Top layer: thin dark "soil surface" (where grass meets earth)
+  var topsoil=makeLayer(-0.3,0.6,0x3D2A15);
+  soilGroup.add(topsoil);
+  // Middle: rich brown earth
+  var mid=makeLayer(-2.5,3.8,0x5C3E20);
+  soilGroup.add(mid);
+  // Deep: lighter clay
+  var deep=makeLayer(-6,2.6,0x856B47);
+  soilGroup.add(deep);
+  // Subtle stratification lines (thin dark planes between layers)
+  for(var i=0;i<8;i++){
+    var stratum=new THREE.Mesh(new THREE.PlaneGeometry(80,0.04),new THREE.MeshBasicMaterial({color:0x2A1A0A,transparent:true,opacity:0.4}));
+    stratum.position.set(0,-1-i*1.1,20.01);
+    soilGroup.add(stratum);
+  }
+  scene.add(soilGroup);
+
+  // --- GRASS BLADES (instanced, emerge from topsoil as scroll progresses) ---
+  var BLADE_COUNT=1800;
+  var bladeGeo=new THREE.PlaneGeometry(0.11,1.4,1,3);
+  bladeGeo.translate(0,0.7,0);
+  var grassMat=new THREE.ShaderMaterial({
+    uniforms:{uTime:{value:0},uGrowth:{value:0}},
+    vertexShader:`
+      uniform float uTime;
+      uniform float uGrowth;
+      attribute vec3 iPos;
+      attribute float iRot;
+      attribute float iHeight;
+      attribute vec3 iColor;
+      varying vec3 vColor;
+      varying float vT;
+      void main(){
+        vColor=iColor;
+        vT=uv.y;
+        float cR=cos(iRot),sR=sin(iRot);
+        vec3 p=position;
+        float wind=sin(uTime*1.6+iPos.x*0.3+iPos.z*0.2)*0.15*uv.y*uv.y;
+        p.x+=wind;
+        // Scale Y by uGrowth (0=no grass, 1=full height)
+        p.y*=iHeight*uGrowth;
+        vec3 rp=vec3(p.x*cR-p.z*sR,p.y,p.x*sR+p.z*cR);
+        vec3 world=rp+iPos;
+        gl_Position=projectionMatrix*modelViewMatrix*vec4(world,1.0);
+      }
+    `,
+    fragmentShader:`
+      varying vec3 vColor;varying float vT;
+      void main(){vec3 col=mix(vColor*0.55,vColor*1.2,vT);gl_FragColor=vec4(col,1.0);}
+    `,
+    side:THREE.DoubleSide
+  });
+  var iPos=new Float32Array(BLADE_COUNT*3);
+  var iRot=new Float32Array(BLADE_COUNT);
+  var iHeight=new Float32Array(BLADE_COUNT);
+  var iColor=new Float32Array(BLADE_COUNT*3);
+  var greens=[[0.106,0.302,0.180],[0.176,0.482,0.282],[0.361,0.722,0.361],[0.220,0.553,0.300]];
+  for(var i=0;i<BLADE_COUNT;i++){
+    iPos[i*3]=(Math.random()-.5)*70;
+    iPos[i*3+1]=0;
+    iPos[i*3+2]=(Math.random()-.5)*30;
+    iRot[i]=Math.random()*Math.PI*2;
+    iHeight[i]=0.8+Math.random()*0.6;
+    var c=greens[Math.floor(Math.random()*greens.length)];
+    iColor[i*3]=c[0];iColor[i*3+1]=c[1];iColor[i*3+2]=c[2];
+  }
+  var instGeo=new THREE.InstancedBufferGeometry();
+  instGeo.copy(bladeGeo);
+  instGeo.instanceCount=BLADE_COUNT;
+  instGeo.setAttribute('iPos',new THREE.InstancedBufferAttribute(iPos,3));
+  instGeo.setAttribute('iRot',new THREE.InstancedBufferAttribute(iRot,1));
+  instGeo.setAttribute('iHeight',new THREE.InstancedBufferAttribute(iHeight,1));
+  instGeo.setAttribute('iColor',new THREE.InstancedBufferAttribute(iColor,3));
+  var grass=new THREE.Mesh(instGeo,grassMat);
+  scene.add(grass);
+
+  // --- ROOTS (vertical tube geometries that extend downward as scroll progresses) ---
+  // Each root is a TubeGeometry along a slightly curved path
+  var ROOT_COUNT=18;
+  var roots=[];
+  // Roots — pale ivory, slightly translucent feel via PBR
+  var rootMat=new THREE.MeshStandardMaterial({color:0xDDD0B8,roughness:0.7,metalness:0});
+  for(var i=0;i<ROOT_COUNT;i++){
+    var x=(Math.random()-.5)*30;
+    var z=(Math.random()-.5)*18;
+    // Curved root path
+    var pts=[
+      new THREE.Vector3(x,0,z),
+      new THREE.Vector3(x+(Math.random()-.5)*1.5,-2,z+(Math.random()-.5)*0.8),
+      new THREE.Vector3(x+(Math.random()-.5)*2.5,-5,z+(Math.random()-.5)*1.2),
+      new THREE.Vector3(x+(Math.random()-.5)*3,-8,z+(Math.random()-.5)*1.5)
+    ];
+    var curve=new THREE.CatmullRomCurve3(pts);
+    var geo=new THREE.TubeGeometry(curve,30,0.05+Math.random()*0.04,5,false);
+    var tube=new THREE.Mesh(geo,rootMat);
+    // Start "hidden" by scaling Y to 0; grow as scroll progresses
+    tube.scale.y=0.001;
+    roots.push(tube);
+    scene.add(tube);
+  }
+
+  // --- WATER DROPLETS ---
+  var DROPS=24;
+  var drops=[];
+  var dropMat=new THREE.MeshBasicMaterial({color:0x5FA8D5,transparent:true,opacity:0.85});
+  for(var i=0;i<DROPS;i++){
+    var d=new THREE.Mesh(new THREE.SphereGeometry(0.18+Math.random()*0.12,8,6),dropMat);
+    d.position.set((Math.random()-.5)*40,15+Math.random()*20,(Math.random()-.5)*20);
+    d.userData={vy:0.15+Math.random()*0.1,reset:25+Math.random()*15};
+    drops.push(d);
+    scene.add(d);
+  }
+
+  // --- SUN (appears in later beats) ---
+  var sun=new THREE.Mesh(new THREE.CircleGeometry(5,32),new THREE.MeshBasicMaterial({color:0xFFEBA0,transparent:true,opacity:0}));
+  sun.position.set(20,18,-50);
+  scene.add(sun);
+  var sunGlow=new THREE.Mesh(new THREE.CircleGeometry(11,32),new THREE.MeshBasicMaterial({color:0xFFEBA0,transparent:true,opacity:0}));
+  sunGlow.position.copy(sun.position);
+  sunGlow.position.z-=.1;
+  scene.add(sunGlow);
+
+  // --- STATE ---
+  var state={
+    camX:0,camY:-3,camZ:18,
+    lookX:0,lookY:-3,lookZ:0,
+    grassGrowth:0,
+    rootGrowth:0,
+    waterActive:0,  // 0=no drops visible, 1=full
+    sunOpacity:0,
+    bgR:0.051,bgG:0.129,bgB:0.094  // 0x0D2118
+  };
+  var _bg=new THREE.Color();
+
+  // --- TIMELINE: 6 beats ---
+  // Beat 1: underground side-view of soil layers, no grass, no roots
+  // Beat 2: camera slides; water drops start falling from above
+  // Beat 3: roots extend down into soil
+  // Beat 4: grass starts growing UP from topsoil
+  // Beat 5: camera rotates UP to surface view, sun appears, full lawn
+  // Beat 6: dramatic pull-back of finished lawn
+
+  var tl=gsap.timeline({
+    defaults:{ease:'power3.inOut'},
+    scrollTrigger:{
+      trigger:'.story',start:'top top',end:'bottom bottom',
+      scrub:1.2,pin:'.story-pin',anticipatePin:1,fastScrollEnd:true,
+      onUpdate:function(self){
+        var idx=Math.min(5,Math.floor(self.progress*6));
+        document.querySelectorAll('.beat').forEach(function(b,i){b.classList.toggle('in',i===idx)});
+        document.querySelectorAll('.brail-dot').forEach(function(d,i){d.classList.toggle('active',i===idx)});
+      }
+    }
+  });
+
+  // Beat 1→2: pan camera right, start water
+  tl.to(state,{camX:-6,camY:-2,camZ:16,lookX:-3,lookY:-2,duration:1.3},0)
+    .to(state,{waterActive:1,duration:1.3,ease:'sine.out'},'<+0.3')
+    // Beat 2→3: roots grow
+    .to(state,{camX:4,camY:-3,camZ:14,lookX:2,lookY:-4,duration:1.4},'>-0.2')
+    .to(state,{rootGrowth:1,duration:1.6,ease:'power2.out'},'<')
+    // Beat 3→4: grass starts growing
+    .to(state,{camX:0,camY:-1,camZ:14,lookX:0,lookY:0,duration:1.5},'>-0.2')
+    .to(state,{grassGrowth:0.6,duration:1.6,ease:'power2.out'},'<')
+    // Beat 4→5: camera ROTATES UP to surface view, sun appears
+    .to(state,{camX:2,camY:3,camZ:14,lookX:0,lookY:0.5,lookZ:-8,duration:1.8},'>-0.2')
+    .to(state,{grassGrowth:1,duration:1.5,ease:'sine.out'},'<')
+    .to(state,{sunOpacity:0.7,bgR:0.392,bgG:0.620,bgB:0.812,duration:1.8,ease:'sine.inOut'},'<')  // bright sky 0x649ECF
+    // Beat 5→6: dramatic pull back
+    .to(state,{camX:0,camY:6,camZ:24,lookX:0,lookY:1,lookZ:-12,duration:1.6},'>-0.3')
+    .to(state,{bgR:0.282,bgG:0.541,bgB:0.749,duration:1.6,ease:'sine.inOut'},'<');  // deeper sky
+
+  // --- RENDER ---
+  var clock=new THREE.Clock();
+  var heroVisible=true;
+  if('IntersectionObserver' in window){new IntersectionObserver(function(e){heroVisible=e[0].isIntersecting},{threshold:0.01}).observe(canvas)}
+  window.addEventListener('resize',function(){
+    if(window.innerWidth<=900)return;
+    W=canvas.offsetWidth;H=canvas.offsetHeight;
+    renderer.setSize(W,H);camera.aspect=W/H;camera.updateProjectionMatrix();
+  },{passive:true});
+
+  function render(){
+    requestAnimationFrame(render);
+    if(!heroVisible)return;
+    var t=clock.getElapsedTime();
+    grassMat.uniforms.uTime.value=t;
+    grassMat.uniforms.uGrowth.value=state.grassGrowth;
+
+    // Root growth: scale Y from 0.001 to 1
+    roots.forEach(function(r,i){
+      var g=Math.min(1,Math.max(0.001,state.rootGrowth*(0.5+i*0.04)));
+      r.scale.y=g;
+    });
+
+    // Water drops fall (only when waterActive)
+    drops.forEach(function(d){
+      d.material.opacity=0.85*state.waterActive;
+      d.position.y-=d.userData.vy*state.waterActive;
+      if(d.position.y<-5){d.position.y=d.userData.reset;d.position.x=(Math.random()-.5)*40}
+    });
+
+    // Sun opacity
+    sun.material.opacity=state.sunOpacity;
+    sunGlow.material.opacity=state.sunOpacity*0.4;
+
+    // Camera + bg
+    camera.position.set(state.camX,state.camY,state.camZ);
+    camera.lookAt(state.lookX,state.lookY,state.lookZ);
+    _bg.setRGB(state.bgR,state.bgG,state.bgB);
+    renderer.setClearColor(_bg,1);
+    scene.fog.color.copy(_bg);
+    renderer.render(scene,camera);
+  }
+  render();
+
+  // Click rail to jump
+  document.querySelectorAll('.brail-dot').forEach(function(d){
+    d.addEventListener('click',function(){
+      var beat=parseInt(d.dataset.beat,10);
+      var story=document.querySelector('.story');
+      var rect=story.getBoundingClientRect();
+      var pageTop=window.scrollY+rect.top;
+      var sectionH=story.offsetHeight-window.innerHeight;
+      var targetY=pageTop+sectionH*(beat/5.5);
+      if(window.__lenis){window.__lenis.scrollTo(targetY,{duration:1.2})}
+      else{window.scrollTo({top:targetY,behavior:'smooth'})}
+    });
+  });
+})();
 </script>
-<div class="modal-overlay" id="bookModal"><div class="modal-box"><button class="modal-close" onclick="closeModal()"></body>times;</button><h3>SCC Lawn Care</h3><p>Ready to book? Give us a call or find us on the map.</p><a href="tel:6364856004" class="modal-phone">(636) 485-6004</a><div class="modal-addr">816 Sherwood Forest Ct, O'Fallon, MO 63366</div><div class="modal-btns"><a href="tel:6364856004" class="modal-btn-call">Call Now</a><a href="https://maps.google.com/?q=816+Sherwood+Forest+Ct+OFallon+MO" target="_blank" class="modal-btn-map">Get Directions</a></div></div></div><script>function openBookModal(){document.getElementById('bookModal').classList.add('active')}function closeModal(){document.getElementById('bookModal').classList.remove('active')}document.getElementById('bookModal').addEventListener('click',function(e){if(e.target===this)closeModal()});</script>
+
+<!-- Split text -->
+<script>
+(function(){
+  if(!window.gsap||!window.ScrollTrigger)return;
+  function split(el){
+    if(el.dataset.splitDone)return;
+    el.dataset.splitDone='1';
+    function proc(n){
+      if(n.nodeType===3){
+        var f=document.createDocumentFragment();
+        n.textContent.split(/(\s+)/).forEach(function(w){
+          if(/^\s+$/.test(w)){f.appendChild(document.createTextNode(w));return}
+          var ws=document.createElement('span');ws.style.display='inline-block';ws.style.whiteSpace='nowrap';
+          for(var i=0;i<w.length;i++){var s=document.createElement('span');s.style.display='inline-block';s.style.transform='translateY(110%)';s.style.opacity='0';s.style.transition='transform .9s cubic-bezier(.22,1,.36,1),opacity .8s ease';s.textContent=w[i];ws.appendChild(s)}
+          f.appendChild(ws);
+        });
+        n.parentNode.replaceChild(f,n);
+      }else if(n.nodeType===1){Array.from(n.childNodes).forEach(proc)}
+    }
+    Array.from(el.childNodes).forEach(proc);
+    var chars=el.querySelectorAll('span > span');
+    ScrollTrigger.create({trigger:el,start:'top 88%',once:true,onEnter:function(){chars.forEach(function(c,i){setTimeout(function(){c.style.transform='translateY(0)';c.style.opacity='1'},i*15)})}});
+  }
+  document.querySelectorAll('[data-split]').forEach(split);
+  gsap.utils.toArray('.svc').forEach(function(c){gsap.fromTo(c,{y:24,opacity:0},{y:0,opacity:1,duration:.8,ease:'power3.out',scrollTrigger:{trigger:c,start:'top 90%',once:true}})});
+  gsap.utils.toArray('.stat').forEach(function(c,i){gsap.fromTo(c,{y:24,opacity:0},{y:0,opacity:1,duration:.6,delay:i*0.1,ease:'power2.out',scrollTrigger:{trigger:'.stats-section',start:'top 85%',once:true}})});
+  gsap.utils.toArray('.rev').forEach(function(c,i){gsap.fromTo(c,{y:24,opacity:0},{y:0,opacity:1,duration:.7,delay:i*0.1,ease:'power2.out',scrollTrigger:{trigger:'.rg',start:'top 80%',once:true}})});
+})();
+</script>
+
+<!-- Magnetic -->
+<script>
+(function(){
+  if(window.matchMedia('(pointer:coarse)').matches)return;
+  function bind(el){
+    var inner=el.querySelector('.magnetic-inner');
+    if(!inner){var s=document.createElement('span');s.className='magnetic-inner';while(el.firstChild)s.appendChild(el.firstChild);el.appendChild(s);inner=s}
+    var raf=0,tx=0,ty=0;
+    function apply(){raf=0;el.style.transform='translate('+(tx*.3)+'px,'+(ty*.3)+'px)';inner.style.transform='translate('+(tx*.5)+'px,'+(ty*.5)+'px)'}
+    el.addEventListener('mousemove',function(e){var r=el.getBoundingClientRect();tx=e.clientX-r.left-r.width/2;ty=e.clientY-r.top-r.height/2;if(!raf)raf=requestAnimationFrame(apply)});
+    el.addEventListener('mouseleave',function(){if(raf){cancelAnimationFrame(raf);raf=0}el.style.transform='';inner.style.transform=''});
+  }
+  document.querySelectorAll('.magnetic').forEach(bind);
+})();
+</script>
+
+<!-- Masonry image fallback -->
+<script>
+(function(){
+  document.querySelectorAll('.mtile-bg').forEach(function(bg){
+    var url=(bg.style.backgroundImage||'').replace(/^url\(["']?/,'').replace(/["']?\)$/,'');
+    if(!url)return;
+    var img=new Image();
+    img.onerror=function(){bg.style.display='none';var fb=bg.parentNode.querySelector('.mtile-fallback');if(fb)fb.style.display='flex'};
+    img.src=url;
+  });
+})();
+</script>
+
+<!-- Booking form -->
+<script>
+(function(){
+  var form=document.getElementById('bookingForm'),success=document.getElementById('bookingSuccess');
+  if(!form)return;
+  form.addEventListener('submit',async function(e){
+    e.preventDefault();
+    var btn=form.querySelector('button[type=submit]');
+    var inner=btn.querySelector('.magnetic-inner')||btn;
+    var orig=inner.textContent;inner.textContent='Sending...';btn.disabled=true;
+    try{await fetch('/',{method:'POST',body:new FormData(form)});form.style.display='none';success.style.display='block'}
+    catch(err){inner.textContent=orig;btn.disabled=false;alert('Something went wrong. Call (636) 485-6004.')}
+  });
+})();
+</script>
+
 </body>
 </html>
