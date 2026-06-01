@@ -518,6 +518,17 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener
   var rim=new THREE.DirectionalLight(0xB0CCE8,0.35);
   rim.position.set(-15,8,20);
   scene.add(rim);
+  if('outputColorSpace' in renderer){renderer.outputColorSpace=THREE.SRGBColorSpace}else{renderer.outputEncoding=THREE.sRGBEncoding}
+  (function(){
+    var c=document.createElement('canvas');c.width=32;c.height=256;var g=c.getContext('2d');
+    var gr=g.createLinearGradient(0,0,0,256);
+    gr.addColorStop(0,'#bfe0f5');gr.addColorStop(0.45,'#7fae6a');gr.addColorStop(0.5,'#e8f0e2');
+    gr.addColorStop(0.6,'#5c3e20');gr.addColorStop(0.85,'#3d2a15');gr.addColorStop(1,'#241608');
+    g.fillStyle=gr;g.fillRect(0,0,32,256);
+    var tex=new THREE.CanvasTexture(c);tex.mapping=THREE.EquirectangularReflectionMapping;
+    var pm=new THREE.PMREMGenerator(renderer);pm.compileEquirectangularShader();
+    scene.environment=pm.fromEquirectangular(tex).texture;tex.dispose();pm.dispose();
+  })();
 
   // --- SOIL CROSS-SECTION (stacked horizontal slabs of earth tones) ---
   // Each layer is a wide thin BoxGeometry at a Y position
@@ -653,10 +664,10 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener
 
   // --- STATE ---
   var state={
-    camX:0,camY:-3,camZ:18,
-    lookX:0,lookY:-3,lookZ:0,
-    grassGrowth:0,
-    rootGrowth:0,
+    camX:0,camY:-1,camZ:17,
+    lookX:0,lookY:-1.5,lookZ:0,
+    grassGrowth:0.42,
+    rootGrowth:0.35,
     waterActive:0,  // 0=no drops visible, 1=full
     sunOpacity:0,
     bgR:0.051,bgG:0.129,bgB:0.094  // 0x0D2118
